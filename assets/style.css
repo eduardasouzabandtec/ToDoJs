@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html body  {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-image: url("./img/bg-desktop-light.jpg");
+    background-repeat: repeat-x; 
+    font-family: 'Josefin Sans', sans-serif;;
+    background-color:  hsl(235, 21%, 11%);
+    font-size: 18px;
+}
+main {
+    width: 37%;
+    margin: 0 auto;
+}
+section{
+    margin-left: 25%;
+}
+.todo__container {
+    margin-top: 200px;
+    
+}
+.todo__button--clear {
+    background-color: transparent;
+    border: none;
+    width: 20%;
+    color: hsl(234, 11%, 52%);
+    font-size: 22px;
+}
+.todo__header{
+    margin-left: 25%;
+}
+.todo__button--clear:hover {
+    color: red;
+} 
+
+.todo__container--item{
+    background-color:  hsl(235, 24%, 19%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 9px;
+    color: hsl(236, 33%, 92%);
+}
+
+.todo__item {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    min-height: 46px;
+    align-items: center;
+    border-bottom: 1px solid hsl(236, 33%, 92%);
+}
+.todo__item > label {
+    width: 80%;
+    text-align: initial;
+    word-break: break-word;
+    text-transform: capitalize;
+}
+.todo__item > label > input {
+    margin-right: 7px;
+}
+.todo__item:last-child {
+    border-bottom: none;
+}
+
+.todo__item--active{
+    text-decoration: line-through;
+    color: #C0C0C0;
+}
+
+.todo__add--conteiner {
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 9px;
+    width: 64%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.todo__add--input{
+    margin-left: 5px;
+    padding-left: 20px;
+    color: white;
+    background-color: hsl(235, 24%, 19%);
+    border: none;
+    width: 90%;
+    height: 35px;
+}
+.todo__add--input:focus{
+    box-shadow: 0 0 0 0;
+    text-transform: capitalize;
+    outline: 0;
+}
+.todo__add--input::placeholder {
+    color: white;
+}
+
+.todo__add--btn {
+    background-color: hsl(235, 21%, 11%);
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    width: 90px;
+    height: 25px;
+
+}
