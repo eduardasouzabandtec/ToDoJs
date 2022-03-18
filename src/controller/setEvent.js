@@ -1,33 +1,28 @@
-import getDom from "./getDom.js";
-import { selectDomAll } from "./selectQuery.js";
+import GET_DOM from "./getDom.js";
+import { TOGGLE_CLASS } from "./toggleClass.js";
+import{ CLEAR_CLASS } from './clearClass.js'
+
 let events = {
     buttonAdd:{
-        dom: getDom.buttonAdd,
+        dom: GET_DOM.buttonAdd,
         addEvent
     },
     buttonClear: {
-        dom: getDom.buttonClear,
-        addAllEvent
+        dom: '[data-js="clearButton"]',
+        subtype: 'click',
+        CLEAR_CLASS
     },
     labelItem: {
         dom: '[data-js="check"]',
         subtype: 'click',
-        addAllEvent
+        TOGGLE_CLASS
     }
   
 }
 
 function addEvent(callback) {
-    
-    this.dom.select.addEventListener(this.dom.typeClick, callback)
+    this.dom.select.addEventListener(this.dom.typeClick, callback);
 }
 
-function addAllEvent(callback) {
-    let type = this.subtype;
-    Array.from(selectDomAll(this.dom)).forEach(function (element){
-        element.addEventListener(type, callback)
-    })
-
-}
 
 export default  events
